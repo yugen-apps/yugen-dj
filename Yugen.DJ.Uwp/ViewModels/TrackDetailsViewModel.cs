@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Uwp;
+using CommunityToolkit.WinUI;
 using System;
 using System.Collections.Generic;
 using Windows.Storage.FileProperties;
@@ -80,7 +80,7 @@ namespace Yugen.DJ.Uwp.ViewModels
 
         private void OnDockServicePositionChanged(object sender, TimeSpan e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 Position = e;
             });
@@ -96,7 +96,7 @@ namespace Yugen.DJ.Uwp.ViewModels
 
         private void OnDockServiceWaveformGenerated(object sender, List<(float min, float max)> e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 PeakList = e;
             });
@@ -104,7 +104,7 @@ namespace Yugen.DJ.Uwp.ViewModels
 
         private void OnDockServiceBpmGenerated(object sender, float e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 Bpm = e;
             });

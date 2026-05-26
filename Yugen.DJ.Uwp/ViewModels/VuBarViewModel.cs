@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Uwp;
+using CommunityToolkit.WinUI;
 using Windows.System;
 using Yugen.Toolkit.Uwp.Audio.Services.Abstractions;
 
@@ -44,7 +44,7 @@ namespace Yugen.DJ.Uwp.ViewModels
 
         private void OnMixerServiceRmsChanged(object sender, float e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 Rms = e;
             });

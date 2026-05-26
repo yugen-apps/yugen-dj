@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Toolkit.Uwp;
+﻿using CommunityToolkit.WinUI;
+using Microsoft.Extensions.DependencyInjection;
 using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Yugen.DJ.Uwp.ViewModels;
@@ -28,7 +28,7 @@ namespace Yugen.DJ.Uwp.Views.Controls
 
         private void OnVinylUpdate(VinylEventArgs e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 ViewModel.ScratchCommand.Execute(e);
             });
@@ -36,7 +36,7 @@ namespace Yugen.DJ.Uwp.Views.Controls
 
         private void OnVinylPointerReleased(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            _dispatcherQueue.EnqueueAsync(() =>
+            _dispatcherQueue.TryEnqueue(() =>
             {
                 ViewModel.ScratchCommand.Execute(new VinylEventArgs(false, false, 0));
             });

@@ -5,8 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:triggers="using:Yugen.DJ.Uwp.StateTriggers"
              xmlns:controls="using:Yugen.Toolkit.Uwp.Audio.Controls"
-             xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-             xmlns:core="using:Microsoft.Xaml.Interactions.Core"
              xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
              xmlns:observableobjects="using:Yugen.DJ.Uwp.ObservableObjects"
              mc:Ignorable="d"
@@ -119,9 +117,9 @@
                             PointerReleased="OnVinylPointerReleased"
                             Update="OnVinylUpdate">
                 <!--<interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="PointerReleased">
-                        <core:InvokeCommandAction Command="{x:Bind ViewModel.ScratchCommand}" />
-                    </core:EventTriggerBehavior>
+                    <interactivity:EventTriggerBehavior EventName="PointerReleased">
+                        <interactivity:InvokeCommandAction Command="{x:Bind ViewModel.ScratchCommand}" />
+                    </interactivity:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>-->
             </controls:Vinyl>
         </Grid>
