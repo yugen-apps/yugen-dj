@@ -15,7 +15,7 @@
 
   <Properties>
     <DisplayName>Yugen DJ</DisplayName>
-    <PublisherDisplayName>PandaSharp</PublisherDisplayName>
+    <PublisherDisplayName>Yugen-Apps</PublisherDisplayName>
     <Logo>Assets\Store\StoreLogo.png</Logo>
   </Properties>
 

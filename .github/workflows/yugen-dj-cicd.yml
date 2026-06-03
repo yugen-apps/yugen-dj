@@ -9,7 +9,7 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
   packages: write
 
 jobs:
@@ -25,15 +25,16 @@ jobs:
       solution_file: "Yugen.DJ.slnx"
 
   deploy_store_stage:
-    uses: yugen-apps/yugen-templates/.github/workflows/deploy-uwp-store.yml@main
+    uses: yugen-apps/yugen-templates/.github/workflows/deploy-uwp-store-cli.yml@main
     needs: [ setup_stage, build_pack_stage ]
     secrets:
-      azure_client_id: ${{ secrets.AZURE_STORE_CLIENT_ID }}
-      azure_client_secret: ${{ secrets.AZURE_STORE_CLIENT_SECRET }}
-      azure_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
-      azure_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      store_seller_id: ${{ secrets.STORE_SELLER_ID  }}
+      azure_client_id: "${{ secrets.AZURE_STORE_CLIENT_ID }}"
+      azure_client_secret: "${{ secrets.AZURE_STORE_CLIENT_SECRET }}"
+      azure_tenant_id: "${{ secrets.AZURE_TENANT_ID }}"
+      azure_subscription_id: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
+      store_seller_id: "${{ secrets.STORE_SELLER_ID  }}"
     with:
       artifact_name: "Yugen.DJ.Uwp"
       project_version: "${{ needs.setup_stage.outputs.major_minor_patch_build }}"
-      store_app_id: "9PKX15RGL06W"
+      store_app_id: "${{ vars.STORE_APP_ID  }}"
+      store_flight_id: "${{ vars.STORE_FLIGHT_ID  }}"
