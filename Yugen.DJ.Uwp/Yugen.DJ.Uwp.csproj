@@ -245,16 +245,16 @@
       <Version>2.8.7</Version>
     </PackageReference>
     <PackageReference Include="Yugen.Toolkit.Standard">
-      <Version>2.0.12-preview</Version>
+      <Version>2.0.13-preview</Version>
     </PackageReference>
     <PackageReference Include="Yugen.Toolkit.Uwp.Audio.Controls">
-      <Version>2.0.12-preview</Version>
+      <Version>2.0.13-preview</Version>
     </PackageReference>
     <PackageReference Include="Yugen.Toolkit.Uwp.Audio.Services.Bass">
-      <Version>2.0.12-preview</Version>
+      <Version>2.0.13-preview</Version>
     </PackageReference>
     <PackageReference Include="Yugen.Toolkit.Uwp.Controls">
-      <Version>2.0.12-preview</Version>
+      <Version>2.0.13-preview</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
@@ -267,7 +267,7 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
-  -->  		
+  -->
   <ItemGroup>
     <None Include="Assets\runtimes\$(Platform)\bass.dll">
       <Link>bass.dll</Link>
