@@ -269,15 +269,15 @@
   </Target>
   -->  		
   <ItemGroup>
-    <None Include="bin\$(Platform)\$(Configuration)\Yugen.Toolkit.Uwp.Audio.Services.Bass\runtimes\$(Platform)\bass.dll">
+    <None Include="Assets\runtimes\$(Platform)\bass.dll">
       <Link>bass.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="bin\$(Platform)\$(Configuration)\Yugen.Toolkit.Uwp.Audio.Services.Bass\runtimes\$(Platform)\bass_fx.dll">
+    <None Include="Assets\runtimes\$(Platform)\bass_fx.dll">
       <Link>bass_fx.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="bin\$(Platform)\$(Configuration)\Yugen.Toolkit.Uwp.Audio.Services.Bass\runtimes\$(Platform)\bassmix.dll">
+    <None Include="Assets\runtimes\$(Platform)\bassmix.dll">
       <Link>bassmix.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
