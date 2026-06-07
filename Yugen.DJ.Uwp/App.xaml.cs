@@ -137,6 +137,7 @@ namespace Yugen.DJ.Uwp
                 .AddTransient<TrackDetailsViewModel>()
                 .AddTransient<VolumeViewModel>()
                 .AddTransient<VuBarViewModel>()
+                .AddTransient<AboutViewModel>()
 
                 .BuildServiceProvider();
         }

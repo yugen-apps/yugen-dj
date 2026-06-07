@@ -78,6 +78,7 @@
     <Compile Include="Interfaces\IWhatsNewDisplayService.cs" />
     <Compile Include="Services\WhatsNewDisplayService.cs" />
     <Compile Include="ObservableObjects\EqualizerBandObservableOject.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\MixerViewModel.cs" />
     <Compile Include="StateTriggers\SideStateTrigger.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
