@@ -1,0 +1,23 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Docs/">
+    <File Path=".github/workflows/yugen-dj-cicd.yml" />
+    <File Path="Docs/Info.md" />
+    <File Path="Docs/MockupDark.png" />
+    <File Path="Docs/MockupLight.png" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Yugen.DJ/Yugen.DJ.csproj" Id="cf6d3f2c-b3c6-48f6-b08e-fb66cf453097">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Deploy />
+  </Project>
+  <Project Path="Yugen.DJ.Uwp/Yugen.DJ.Uwp.csproj" Id="1a4c16c9-4bd7-4cb2-a51b-d0f06466157e">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Deploy />
+  </Project>
+</Solution>

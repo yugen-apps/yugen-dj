@@ -117,8 +117,12 @@ namespace Yugen.DJ.Uwp.ViewModels
         }
 
         private Task ScratchCommandBehavior(VinylEventArgs e)
-        {
-            return _dockService.Scratch(e.IsTouched, e.IsClockwise, e.CrossProduct);
-        }
-    }
+		{
+			if (e == null)
+			{
+				return Task.CompletedTask;
+			}
+			return _dockService.Scratch(e.IsTouched, e.IsClockwise, e.CrossProduct);
+		}
+	}
 }

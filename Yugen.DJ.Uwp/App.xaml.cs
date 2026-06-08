@@ -1,7 +1,4 @@
-﻿using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
@@ -36,9 +33,6 @@ namespace Yugen.DJ.Uwp
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            AppCenter.Start("587a824e-742c-42a7-ae73-89ec2942b9bf",
-                   typeof(Analytics), typeof(Crashes));
         }
 
         public new static App Current => (App)Application.Current;
@@ -143,6 +137,7 @@ namespace Yugen.DJ.Uwp
                 .AddTransient<TrackDetailsViewModel>()
                 .AddTransient<VolumeViewModel>()
                 .AddTransient<VuBarViewModel>()
+                .AddTransient<AboutViewModel>()
 
                 .BuildServiceProvider();
         }
